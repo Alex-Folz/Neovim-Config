@@ -21,13 +21,11 @@ require("lazy").setup({
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    main = "nvim-treesitter",
     opts = {
       ensure_installed = { "php", "typescript", "javascript", "html", "css", "json", "yaml", "lua", "bash" },
       highlight = { enable = true },
     },
-    config = function(_, opts)
-      require("nvim-treesitter.configs").setup(opts)
-    end,
   },
   "neovim/nvim-lspconfig",
 
