@@ -40,10 +40,30 @@ require("lazy").setup({
   },
 
   {
-    "mason-org/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    dependencies = { "mason-org/mason.nvim" },
     opts = {
-      ensure_installed = { "pyright", "ts_ls", "intelephense" },
+      ensure_installed = {
+        "intelephense",
+        "pyright",
+        "typescript-language-server",
+        "twiggy-language-server",
+        "eslint_d",
+        "js-debug-adapter",
+        "php-debug-adapter",
+        "phpstan",
+        "prettier",
+        "pretty-php",
+        "stylelint",
+        "twig-cs-fixer",
+        "twigcs",
+      },
     },
+  },
+
+  {
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
   },
 
   {
