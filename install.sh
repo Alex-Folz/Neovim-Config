@@ -20,7 +20,8 @@ if [ ! -f "$NVIM_BIN" ]; then
 fi
 
 if [ -d "$HOME/.config/nvim" ]; then
-  git -C "$HOME/.config/nvim" pull --quiet
+  git -C "$HOME/.config/nvim" fetch --quiet origin
+  git -C "$HOME/.config/nvim" reset --hard --quiet origin/master
 else
   echo "Cloning nvim config..."
   git clone --quiet https://github.com/Alex-Folz/Neovim-Config.git "$HOME/.config/nvim"
